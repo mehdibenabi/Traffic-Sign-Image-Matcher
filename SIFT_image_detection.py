@@ -101,31 +101,3 @@ if best_match_index != -1:
 else:
     print("No match found in the folder.")
 
-"""
-I1 -> P10 ==> Buffer
-
-Cycle | Frames reçues                                                           | Décodeur (thread)             | Présentation (thread)
------ | -------------                                                           | -----------------             | ---------------------
-1     | I1                                                                      |                               |
-2     | I1 P2                                                                   |                               |
-3     | I1 P2 P3                                                                |                               |
-4     | I1 P2 P3 P4                                                             |                               |
-5     | I1 P2 P3 P4 I5                                                          |                               |
-6     | I1 P2 P3 P4 I5 P6                                                       |                               | 
-7     | I1 P2 P3 P4 I5 P6 P7                                                    |                               | 
-8     | I1 P2 P3 P4 I5 P6 P7 P8                                                 |                               | 
-9     | I1 P2 P3 P4 I5 P6 P7 P8 I9                                              |                               | 
-10    | I1 P2 P3 P4 I5 P6 P7 P8 I9 P10                                          |                               | 
-11    | I1 P2 P3 P4 I5 P6 P7 P8 I9 P10 P11                                      | I1                            |
-12    | I1 P2 P3 P4 I5 P6 P7 P8 I9 P10 P11 P12                                  | I1 P2                         | I1 
-13    | I1 P2 P3 P4 I5 P6 P7 P8 I9 P10 P11 P12 I13                              | I1 P2 P3                      | I1 P2 
-14    | I1 P2 P3 P4 I5 P6 P7 P8 I9 P10 P11 P12 I13 P14                          | I1 P2 P3 P4                   | I1 P2 P3 
-15    | I1 P2 P3 P4 I5 P6 P7 P8 I9 P10 P11 P12 I13 P14 P15                      | I1 P2 P3 P4 I5                | I1 P2 P3 P4 
-16    | I1 P2 P3 P4 I5 P6 P7 P8 I9 P10 P11 P12 I13 P14 P15 P16                  | I1 P2 P3 P4 I5 P6             | I1 P2 P3 P4 I5
-17    | I1 P2 P3 P4 I5 P6 P7 P8 I9 P10 P11 P12 I13 P14 P15 P16 I17              | I1 P2 P3 P4 I5 P6 P7          | I1 P2 P3 P4 I5 P6 
-18    | I1 P2 P3 P4 I5 P6 P7 P8 I9 P10 P11 P12 I13 P14 P15 P16 I17 P18          | I1 P2 P3 P4 I5 P6 P7 P8       | I1 P2 P3 P4 I5 P6 P7 
-19    | I1 P2 P3 P4 I5 P6 P7 P8 I9 P10 P11 P12 I13 P14 P15 P16 I17 P18 P19      | I1 P2 P3 P4 I5 P6 P7 P8 I9    | I1 P2 P3 P4 I5 P6 P7 P8 
-20    | I1 P2 P3 P4 I5 P6 P7 P8 I9 P10 P11 P12 I13 P14 P15 P16 I17 P18 P19 P20  | I1 P2 P3 P4 I5 P6 P7 P8 I9 P10| I1 P2 P3 P4 I5 P6 P7 P8 I9 
-
-
- """
